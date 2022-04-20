@@ -9,3 +9,16 @@
   display: inline-block;
   color: #FFB46E;
 }
+
+#pixel-board {
+  display: block;
+
+}
+
+.pixel {
+  display: table-cell;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+}
