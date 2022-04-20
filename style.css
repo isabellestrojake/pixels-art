@@ -4,3 +4,8 @@
   font-size: 50px;
   text-align: center;
 }
+.color {
+  border: solid black 1px;
+  display: inline-block;
+  color: #FFB46E;
+}
