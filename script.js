@@ -29,3 +29,11 @@ document.addEventListener('click', (event) => {
     event.target.style.backgroundColor = cssObj.getPropertyValue('background-color');
   }
 });
+
+document.getElementById('clear-board').addEventListener('click', (event) => {
+  const pix = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < pix.length; index += 1) {
+    pix[index].style.backgroundColor = 'white';
+  }
+});
