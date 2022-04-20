@@ -20,3 +20,12 @@ preto.addEventListener('click', selectedColor);
 roxo.addEventListener('click', selectedColor);
 verde.addEventListener('click', selectedColor);
 rosa.addEventListener('click', selectedColor);
+
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('pixel')) {
+    const color = document.querySelector('.selected');
+    const cssObj = window.getComputedStyle(color, null);
+
+    event.target.style.backgroundColor = cssObj.getPropertyValue('background-color');
+  }
+});
