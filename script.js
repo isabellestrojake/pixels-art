@@ -1,13 +1,13 @@
 const backColor = document.getElementsByClassName('color');
 backColor[0].style.backgroundColor = 'black';
-backColor[1].style.backgroundColor = '#452966';
-backColor[2].style.backgroundColor = '#518568';
-backColor[3].style.backgroundColor = '#D95B5B';
+backColor[1].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+backColor[2].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+backColor[3].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
 
 const preto = document.querySelector('.black');
-const roxo = document.querySelector('.purple');
-const verde = document.querySelector('.green');
-const rosa = document.querySelector('.pink');
+const color2 = document.querySelector('.color2');
+const color3 = document.querySelector('.color3');
+const color4 = document.querySelector('.color4');
 
 function selectedColor(event) {
   const selec = document.querySelector('.selected');
@@ -17,9 +17,9 @@ function selectedColor(event) {
 }
 
 preto.addEventListener('click', selectedColor);
-roxo.addEventListener('click', selectedColor);
-verde.addEventListener('click', selectedColor);
-rosa.addEventListener('click', selectedColor);
+color2.addEventListener('click', selectedColor);
+color3.addEventListener('click', selectedColor);
+color4.addEventListener('click', selectedColor);
 
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('pixel')) {
