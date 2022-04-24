@@ -37,3 +37,41 @@ document.getElementById('clear-board').addEventListener('click', (event) => {
     pix[index].style.backgroundColor = 'white';
   }
 });
+
+const fieldRef = document.getElementById('board-size');
+const pixelBoardRef = document.getElementById('pixel-board');
+
+const DEFAULT_VALUE = 5;
+
+function createBoard(value) {
+  pixelBoardRef.innerHTML = '';
+
+  for (let index = 0; index < value; index += 1) {
+    const section = document.createElement('section');
+    pixelBoardRef.appendChild(section);
+
+    for (let index2 = 0; index2 < value; index2 += 1) {
+      const div = document.createElement('div');
+      div.classList.add('pixel');
+      section.appendChild(div);
+    }
+  }
+}
+createBoard(DEFAULT_VALUE);
+
+function validInput() {
+  const inputValue = Number(fieldRef.value);
+
+  if (!fieldRef.value) {
+    window.alert('Board inválido!');
+  }
+  if (inputValue < 5) {
+    fieldRef.value = 5;
+    return createBoard(5);
+  }
+  if (inputValue > 50) {
+    fieldRef.value = 50;
+    return createBoard(50);
+  }
+  createBoard(inputValue);
+}
