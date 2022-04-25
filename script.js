@@ -1,8 +1,16 @@
-const backColor = document.getElementsByClassName('color');
-backColor[0].style.backgroundColor = 'black';
-backColor[1].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-backColor[2].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-backColor[3].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+function generateColor() {
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
+
+  return `rgba(${r}, ${g}, ${b})`;
+}
+
+const rgb = document.getElementsByClassName('color');
+rgb[0].style.backgroundColor = 'black';
+rgb[1].style.backgroundColor = generateColor();
+rgb[2].style.backgroundColor = generateColor();
+rgb[3].style.backgroundColor = generateColor();
 
 const preto = document.querySelector('.black');
 const color2 = document.querySelector('.color2');
@@ -21,16 +29,16 @@ color2.addEventListener('click', selectedColor);
 color3.addEventListener('click', selectedColor);
 color4.addEventListener('click', selectedColor);
 
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('pixel')) {
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('pixel')) {
     const color = document.querySelector('.selected');
     const cssObj = window.getComputedStyle(color, null);
 
-    event.target.style.backgroundColor = cssObj.getPropertyValue('background-color');
+    e.target.style.backgroundColor = cssObj.getPropertyValue('background-color');
   }
 });
 
-document.getElementById('clear-board').addEventListener('click', (event) => {
+document.getElementById('clear-board').addEventListener('click', () => {
   const pix = document.querySelectorAll('.pixel');
 
   for (let index = 0; index < pix.length; index += 1) {
@@ -75,5 +83,6 @@ function validInput() {
   }
   createBoard(inputValue);
 }
+document.getElementById('generate-board').addEventListener('click', validInput);
 
 /* Para a realização deste projeto consultei o course da Trybe e documentação das linguagens, troquei informações entre colegas e profissinais da área e participei das mentorias. */

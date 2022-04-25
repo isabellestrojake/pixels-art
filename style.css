@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap') ;
 
 * {
   margin: 0;
 }
 
 body {
-  background-color: #EDD5C9;
+  background-color: #edd5c9;
 }
 
 #title {
   color: #545266;
-  font-family: 'Indie Flower', cursive;
+  font-family: Indie Flower, cursive;
   font-size: 50px;
   text-align: center;
 }
@@ -21,7 +21,7 @@ body {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  border-radius:4px;
+  border-radius: 4px;
 }
 
 #pixel-board {
