@@ -8,38 +8,24 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <h1 id="title">Paleta de Cores</h1>
+  <p>Divirta-se colorindo!</p>
   <main>
-      <h1 id="title">Paleta de Cores</h1>
       <section id="color-palette">
-        <div class="color selected black">Preto</div>
-        <div class="color color2">Cor 2</div>
-        <div class="color color3">Cor 3</div>
-        <div class="color color4">Cor 4</div>
+        <div class="color selected black"></div>
+        <div class="color color2"></div>
+        <div class="color color3"></div>
+        <div class="color color4"></div>
       </section>
-      <section id="clear-board">
-        <button>
-          <p>Limpar</p>
-        </button>
-      </section>
+        <button id="clear-board"><span>Limpar</span></button>
       <section>
-        <input id="board-size" type="number" min="1" placeholder="Tamanho Magic Paint (5~50)">
+        <input id="board-size" type="number" min="1" placeholder="Tamanho da tabela entre 5~50">
         <button id="generate-board" onclick="validInput()"><span>VQV</span></button>
       </section>
       <section id="pixel-board">
-<!--       <table>
-          <thead class="table-columns">
-            <tr>
-              <th class="column-item">lorem</th>
-            </tr>
-          </thead>
-          <tbody class="table-rows">
-            <tr class="row-item">
-              <td class="row-value"></td>
-            </tr>
-          </tbody>
-        </table> --> 
       </section>
   </main>
+  <footer>Desenvolvido por Isabelle Strojake, 2022</footer>
   <script src="script.js"></script>
 </body>
 </html>

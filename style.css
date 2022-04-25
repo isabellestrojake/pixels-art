@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #EDD5C9;
+}
+
 #title {
-  color: brown;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #545266;
+  font-family: 'Indie Flower', cursive;
   font-size: 50px;
   text-align: center;
 }
@@ -8,18 +18,14 @@
 .color {
   border: solid black 1px;
   display: inline-block;
-  color: #ffb46e;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius:4px;
 }
-
-.color2 {
-  border: solid black 1px;
-  display: inline-block;
-  color: #ffb46e;
-}
-
 
 #pixel-board {
-  display: block;
+  display: inline-block;
 }
 
 .pixel {
@@ -28,4 +34,24 @@
   width: 40px;
   height: 40px;
   border: solid black 1px;
+  cursor: pointer;
+}
+
+main {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+  display: block;
+  position: static;
+  padding-top: 50px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
 }

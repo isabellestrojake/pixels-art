@@ -75,3 +75,5 @@ function validInput() {
   }
   createBoard(inputValue);
 }
+
+/* Para a realização deste projeto consultei o course da Trybe e documentação das linguagens, troquei informações entre colegas e profissinais da área e participei das mentorias. */
